@@ -2,6 +2,20 @@
 
 Pengenalan CSS Dasar
 
+## File Latihan
+
+| File | Materi |
+|---|---|
+| [01-struktur-dasar.css](01-struktur-dasar.css) | Struktur dasar CSS: selector, property, value |
+| [02-inline-css.html](02-inline-css.html) | Inline CSS (atribut `style`) |
+| [03-internal-css.html](03-internal-css.html) | Internal CSS (tag `<style>`) |
+| [04-external-css.html](04-external-css.html) + [style.css](style.css) | External CSS (tag `<link>`) |
+| [05-selector.html](05-selector.html) | Element, class, dan ID selector |
+| [06-property.css](06-property.css) | Property CSS yang sering digunakan |
+| [07-hover-menu.html](07-hover-menu.html) | Efek `:hover` pada menu |
+| [08-cascade.css](08-cascade.css) | Mekanisme cascade & specificity |
+| [09-praktik-gabungan.html](09-praktik-gabungan.html) + [style-ku.css](style-ku.css) | Praktik gabungan: inline + internal + external |
+
 ## Tujuan Pembelajaran
 
 Setelah mempelajari materi ini, diharapkan mampu:

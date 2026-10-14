@@ -1,0 +1,15 @@
+/* P3 - Property CSS yang sering digunakan */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    color: darkblue;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    margin: 10px;
+}

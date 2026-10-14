@@ -1,0 +1,10 @@
+/* P3 - Mekanisme cascade & specificity */
+/* Class selector lebih spesifik daripada element selector */
+
+p {
+    color: blue;
+}
+
+.informasi {
+    color: green;
+}

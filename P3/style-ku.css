@@ -1,0 +1,21 @@
+/* P3 - External CSS untuk 09-praktik-gabungan.html */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    color: #444;
+}
+
+.external-box {
+    background-color: #e8f8e8;
+    padding: 15px;
+    margin-top: 15px;
+    border: 1px solid #82c782;
+}

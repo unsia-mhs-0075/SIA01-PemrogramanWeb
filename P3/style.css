@@ -1,0 +1,13 @@
+/* P3 - External CSS: dipakai oleh 04-external-css.html */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: darkblue;
+}
+
+p {
+    font-size: 18px;
+}
