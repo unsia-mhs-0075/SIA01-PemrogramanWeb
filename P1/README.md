@@ -1,5 +1,19 @@
 # Pertemuan 1
 
+## File Latihan
+
+| File | Materi |
+|---|---|
+| [01-struktur-dasar.html](01-struktur-dasar.html) | Struktur dasar dokumen HTML5 |
+| [02-heading-paragraf.html](02-heading-paragraf.html) | Heading (h1–h6) dan paragraf |
+| [03-format-teks.html](03-format-teks.html) | Pemformatan teks: `strong`, `i`, `hr` |
+| [04-daftar.html](04-daftar.html) | Daftar berurutan (`ol`) dan tidak berurutan (`ul`) |
+| [05-gambar.html](05-gambar.html) | Menampilkan gambar dengan `img` |
+| [06-tabel.html](06-tabel.html) | Tabel sederhana |
+| [07-latihan-gabungan.html](07-latihan-gabungan.html) | Latihan gabungan: halaman profil lengkap |
+
+> Catatan: `05-gambar.html` dan `07-latihan-gabungan.html` menampilkan `gambar.png` (poster sosialisasi akademik Prodi SI UNSIA) yang tersimpan di folder ini.
+
 ## Catatan Dosen
 
 ```
