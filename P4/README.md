@@ -553,3 +553,34 @@ MySQL tidak diperlukan untuk contoh-contoh PHP dasar yang belum menggunakan data
 - [ ] Menggunakan operator perbandingan.
 - [ ] Menggunakan operator logika.
 - [ ] Menjalankan file PHP melalui `localhost`.
+
+---
+
+## File Latihan
+
+| File | Topik | Keluaran |
+|---|---|---|
+| [01-struktur-dasar-echo.php](01-struktur-dasar-echo.php) | Struktur dasar `echo` | `Selamat datang!` |
+| [02-php-dalam-html.php](02-php-dalam-html.php) | PHP disisipkan dalam dokumen HTML | Judul halaman dari PHP |
+| [03-echo-beberapa-nilai.php](03-echo-beberapa-nilai.php) | `echo` dengan beberapa nilai | `Belajar PHP` / `Pertemuan 4` |
+| [04-echo-variabel.php](04-echo-variabel.php) | Menampilkan nilai variabel | `Nama mahasiswa: Andi` |
+| [05-echo-pemisah-koma.php](05-echo-pemisah-koma.php) | `echo` dengan pemisah koma | `Nama: Andi` / `Nilai: 80` |
+| [06-komentar-garis-miring.php](06-komentar-garis-miring.php) | Komentar satu baris `//` | `Belajar PHP` |
+| [07-komentar-pagar.php](07-komentar-pagar.php) | Komentar satu baris `#` | `Halo` |
+| [08-komentar-banyak-baris.php](08-komentar-banyak-baris.php) | Komentar beberapa baris `/* */` | `Contoh komentar PHP` |
+| [09-variabel-data-mahasiswa.php](09-variabel-data-mahasiswa.php) | Variabel data mahasiswa | NIM, nama, alamat, nilai |
+| [10-variabel-nilai-berubah.php](10-variabel-nilai-berubah.php) | Nilai variabel dapat berubah | `Budi` |
+| [11-tipe-data-dasar.php](11-tipe-data-dasar.php) | String, integer, float, boolean, array | `Andi` |
+| [12-string-angka-konversi.php](12-string-angka-konversi.php) | String angka dikonversi PHP | `7.5` |
+| [13-angka-integer-float.php](13-angka-integer-float.php) | Deklarasi integer & float asli | (tanpa keluaran) |
+| [14-konstanta-define.php](14-konstanta-define.php) | Konstanta dengan `define()` | `UNSIA` |
+| [15-operator-aritmatika.php](15-operator-aritmatika.php) | `+ - * / %` | 5 hasil perhitungan |
+| [16-cek-bilangan-ganjil.php](16-cek-bilangan-ganjil.php) | Sisa bagi menentukan ganjil/genap | `1` (ganjil) |
+| [17-increment-decrement.php](17-increment-decrement.php) | Pre/post increment & decrement | `6` / `5` / `6` |
+| [18-operator-penggabung-string.php](18-operator-penggabung-string.php) | Operator `.` | `Selamat Datang di UNSIA` |
+| [19-penggabung-string-html.php](19-penggabung-string-html.php) | Penggabungan dengan tag HTML | `<p>Selamat belajar, Andi!</p>` |
+| [20-operator-perbandingan.php](20-operator-perbandingan.php) | `> == !=` dengan `var_dump` | `bool(true)` / `bool(false)` |
+| [21-operator-logika.php](21-operator-logika.php) | `&&`, `||`, `xor`, `!` | 4 hasil boolean |
+| [22-program-gabungan.php](22-program-gabungan.php) | Gabungan: variabel, konstanta, operator, `if/else` | Total 170, rata-rata 85 |
+
+Semua file dijalankan dengan PHP 8.4 CLI dan keluarannya dicocokkan dengan keterangan `Keluaran` pada catatan di atas. Untuk praktik melalui server, letakkan file di folder `htdocs` lalu akses `http://localhost/...` — PHP tidak dieksekusi bila file dibuka langsung lewat `file://`.
