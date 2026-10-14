@@ -2,6 +2,21 @@
 
 Mengenal Tag, Elemen dan Atribut dalam HTML
 
+## File Latihan
+
+| File | Materi |
+|---|---|
+| [01-struktur-dasar.html](01-struktur-dasar.html) | Struktur dasar dokumen HTML5 |
+| [02-tag-pembuka-penutup.html](02-tag-pembuka-penutup.html) | Tag pembuka & penutup (h1, p, div) |
+| [03-nesting.html](03-nesting.html) | Nesting elemen (`strong` di dalam `p`) |
+| [04-id-class.html](04-id-class.html) | Atribut `id` & `class` + demo CSS |
+| [05-tautan.html](05-tautan.html) | Atribut tautan: `href`, `target` |
+| [06-gambar.html](06-gambar.html) | Atribut gambar: `src`, `alt`, `width`, `height`, `title` |
+| [07-atribut-global-komentar.html](07-atribut-global-komentar.html) | Atribut global (`id`, `class`, `title`, `style`, `hidden`) & komentar |
+| [08-latihan-gabungan.html](08-latihan-gabungan.html) | Latihan gabungan: halaman profil |
+
+> Catatan: `06-gambar.html` dan `08-latihan-gabungan.html` memakai `../P1/gambar.png` (poster sosialisasi akademik di folder P1).
+
 ## Materi Video Referensi
 
 - [HTML Dasar: Tag](https://www.youtube.com/watch?v=cUWBYzA6M-8) oleh
