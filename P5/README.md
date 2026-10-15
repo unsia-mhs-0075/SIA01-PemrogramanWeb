@@ -2,6 +2,34 @@
 
 Pengenalan CodeIgniter 3 dan Bootstrap 4
 
+## File Latihan
+
+Proyek lengkap bisa dijalankan ada di folder **[ci-app/](ci-app/)**:
+
+| File | Keterangan |
+|---|---|
+| [ci-app/application/controllers/Home.php](ci-app/application/controllers/Home.php) | Controller Home: kirim data ke view |
+| [ci-app/application/controllers/Mahasiswa.php](ci-app/application/controllers/Mahasiswa.php) | Controller Mahasiswa: muat model + kirim data |
+| [ci-app/application/models/Mahasiswa_model.php](ci-app/application/models/Mahasiswa_model.php) | Model: `getAllMahasiswa()` via Query Builder |
+| [ci-app/application/views/home.php](ci-app/application/views/home.php) | View halaman utama (jumbotron) |
+| [ci-app/application/views/mahasiswa/index.php](ci-app/application/views/mahasiswa/index.php) | View tabel daftar mahasiswa |
+| [ci-app/application/views/templates/header.php](ci-app/application/views/templates/header.php) | Template header + navbar Bootstrap |
+| [ci-app/application/views/templates/footer.php](ci-app/application/views/templates/footer.php) | Template footer |
+| [ci-app/application/config/routes.php](ci-app/application/config/routes.php) | `default_controller = 'home'` |
+| [ci-app/application/config/database.php](ci-app/application/config/database.php) | Konfigurasi database (SQLite) |
+| [ci-app/db/buat_tabel.sql](ci-app/db/buat_tabel.sql) | SQL tabel mahasiswa (versi MySQL) |
+| [ci-app/db/buat_tabel.sqlite.sql](ci-app/db/buat_tabel.sqlite.sql) | SQL tabel mahasiswa (versi SQLite) |
+| [screenshot-mahasiswa.png](screenshot-mahasiswa.png) | Screenshot aplikasi berjalan |
+
+**Cara menjalankan:**
+```bash
+cd ci-app
+php -S localhost:8000
+# buka http://localhost:8000/ dan http://localhost:8000/index.php/mahasiswa
+```
+
+Detail lengkap (termasuk catatan SQLite vs MySQL dan kompatibilitas PHP 8.4) ada di [ci-app/PANDUAN.md](ci-app/PANDUAN.md).
+
 ## Tujuan Pembelajaran
 
 Setelah mempelajari materi ini, diharapkan mampu:
