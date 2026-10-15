@@ -209,3 +209,41 @@ Opsi `--dev` membantu memisahkan dependensi pengembangan dari dependensi produks
 Catatan ini mengikuti cakupan transkrip video yang telah dibahas. Materi berfokus pada pengenalan Telescope, instalasi, migrasi, dan akses dashboard.
 
 Pembahasan konfigurasi Telescope secara mendalam, analisis performa lanjutan, penyaringan entri, dan penanganan masalah produksi tidak dijelaskan secara rinci dalam catatan ini.
+
+---
+
+## File Latihan
+
+Berbeda dari pertemuan lain, P7 tidak menambah kode aplikasi — isinya **proses instalasi Telescope**. Karena itu yang dilampirkan adalah urutan perintahnya, dan semuanya **sudah dijalankan sungguhan** pada proyek Laravel 11.57.0 dengan Telescope 5.26.0.
+
+| File | Keterangan |
+|---|---|
+| [contoh/perintah-instalasi.sh](contoh/perintah-instalasi.sh) | Urutan `composer require --dev` → `telescope:install` → `migrate` → `serve` |
+| [contoh/periksa-tabel.sh](contoh/periksa-tabel.sh) | Memeriksa tabel `telescope_*` dan jumlah entri terekam |
+
+**Hasil uji sungguhan (bukan salinan catatan):**
+
+| Yang diuji | Hasil |
+|---|---|
+| `composer require laravel/telescope --dev` | ✅ terpasang, tercatat di `require-dev` |
+| `php artisan telescope:install` | ✅ publish service provider, config, dan migrasi |
+| `php artisan migrate` | ✅ tabel Telescope terbentuk |
+| Tabel di database | ✅ `telescope_entries`, `telescope_entries_tags`, `telescope_monitoring` — ketiganya ada, sesuai tabel pada catatan di atas |
+| Dashboard `/telescope` | ✅ HTTP 200, judul halaman `Telescope - Laravel` |
+| Perekaman aktivitas | ✅ 26 entri terekam setelah beberapa request |
+
+Tipe entri yang terekam Telescope, sesuai fungsi yang dijelaskan pada catatan:
+
+| Tipe | Isi yang terbukti terekam |
+|---|---|
+| `request` | `GET /` dengan `response_status: 200` |
+| `query` | Query SQL sungguhan, mis. `select "migration" from "migrations"` |
+| `view` | View yang dirender, mis. `welcome` |
+
+Jadi ketiga kemampuan utama Telescope pada catatan di atas — pemantauan request, pemantauan query database, dan analisis aktivitas aplikasi — terbukti bekerja, bukan hanya teori.
+
+**Catatan lingkungan:**
+
+- Materi video memakai MySQL/MariaDB + phpMyAdmin untuk memeriksa tabel. Proyek uji di sini memakai **SQLite** (bawaan Laravel 11), jadi pemeriksaannya lewat `php artisan tinker`. Perintah MySQL-nya sudah disiapkan sebagai komentar di `periksa-tabel.sh`.
+- `--no-security-blocking` diperlukan karena Composer menolak `laravel/framework` 11.31+ karena advisory keamanan. Untuk belajar ini aman, tapi untuk produksi pilih versi yang sudah ditambal.
+- **Keamanan:** sesuai catatan di atas, dashboard Telescope menampilkan informasi internal aplikasi. Pada proyek uji aksesnya dibuka karena hanya di localhost; jangan begini di produksi.
