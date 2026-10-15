@@ -535,3 +535,31 @@ Materi ini merupakan daftar persiapan belajar, bukan berarti semua konsep terseb
 Catatan ini berfokus pada pengenalan Laravel 11 dan teknologi pendukungnya sesuai transkrip video.
 
 Pembahasan implementasi autentikasi secara lengkap, operasi CRUD, relasi database, pengujian, deployment produksi, dan konfigurasi keamanan tidak dijelaskan secara mendalam dalam catatan ini.
+
+---
+
+## File Latihan
+
+Contoh kode di bawah ini diambil dari proyek **Laravel 11.6.1 yang benar-benar dibuat dan dijalankan** (bukan salinan dari catatan). Proyek dibuat dengan `composer create-project laravel/laravel` lalu diuji lewat `php artisan serve` — ketiga route terbukti membalas HTTP 200.
+
+| File | Keterangan | Hasil uji |
+|---|---|---|
+| [contoh-kode/web.php](contoh-kode/web.php) | Route: teks langsung + controller | `/` → `Selamat Datang di Laravel` |
+| [contoh-kode/HomeController.php](contoh-kode/HomeController.php) | Controller: `index()` view, `sapa()` kirim data | `/home` dan `/sapa` → HTTP 200 |
+| [contoh-kode/home.blade.php](contoh-kode/home.blade.php) | Blade: `{{ }}` + directive `@isset` | `{{ $nama }}` → `Andi`; tanpa data → h2 disembunyikan |
+
+**Cara membuat proyeknya sendiri:**
+
+```bash
+composer create-project laravel/laravel laravel-app "^11.0"
+cd laravel-app
+php artisan make:controller HomeController
+php artisan route:list
+php artisan serve
+```
+
+**Catatan penting untuk proyek Laravel di luar Windows:**
+
+- Materi video memakai **Laragon/Herd di Windows**. Di Linux (mesin ini) Composer menolak `laravel/framework` versi 11.31 ke atas karena advisory keamanan, jadi proyek uji dibuat dengan tambahan `--no-security-blocking`. Versi terpasang: **11.6.1**, dan PHP 8.4.26 sudah melewati syarat minimal PHP 8.2.
+- Laravel 11 memakai **SQLite** secara bawaan pada `.env` (`DB_CONNECTION=sqlite`), jadi tidak perlu MySQL untuk belajar dasar — sama seperti pilihan di video.
+- `vendor/`, `node_modules/`, dan `.env` **tidak** ikut ke repo karena sudah diblokir `.gitignore` proyek Laravel.
